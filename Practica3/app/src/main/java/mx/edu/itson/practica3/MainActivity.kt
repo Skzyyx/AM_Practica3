@@ -14,11 +14,13 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-        val btnIniciar: Button = findViewById(R.id.btn_get_started)
 
 
-        btnIniciar.setOnClickListener {
-            var intent = Intent(this, RegisterActivity::class.java)
+        val button: Button = findViewById(R.id.btn_get_started)
+
+
+        button.setOnClickListener {
+            var intent: Intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
         }
 

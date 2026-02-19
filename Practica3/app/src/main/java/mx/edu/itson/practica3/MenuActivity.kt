@@ -14,19 +14,46 @@ class MenuActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_menu)
 
-
-        var btnAntojitos: Button = findViewById(R.id.button_cold_drinks) as Button
-        var btnEspecialidades: Button = findViewById(R.id.button_hot_drinks) as Button
+        val btnAntojitos : Button = findViewById<Button>(R.id.button_antojitos)
+        val btnEspecialidades : Button = findViewById<Button>(R.id.button_especialidades)
+        val btnCombinaciones : Button = findViewById<Button>(R.id.button_combinaciones)
+        val btnTortas : Button = findViewById<Button>(R.id.button_tortas)
+        val btnSopas : Button = findViewById<Button>(R.id.button_sopas)
+        val btnBebidas : Button = findViewById<Button>(R.id.button_bebidas)
 
         btnAntojitos.setOnClickListener {
-            var intent: Intent = Intent(this, ProductosActivity::class.java)
-            intent.putExtra("menuType", "Antojitos")
+            val intent : Intent = Intent(this, ProductsActivity::class.java)
+            intent.putExtra("menuType","Antojitos")
             startActivity(intent)
         }
 
         btnEspecialidades.setOnClickListener {
-            var intent: Intent = Intent(this, ProductosActivity::class.java)
-            intent.putExtra("menuType", "Especialidades")
+            val intent : Intent = Intent(this, ProductsActivity::class.java)
+            intent.putExtra("menuType","Especialidades")
+            startActivity(intent)
+        }
+
+        btnCombinaciones.setOnClickListener {
+            val intent : Intent = Intent(this, ProductsActivity::class.java)
+            intent.putExtra("menuType","Combinaciones")
+            startActivity(intent)
+        }
+
+        btnTortas.setOnClickListener {
+            val intent : Intent = Intent(this, ProductsActivity::class.java)
+            intent.putExtra("menuType","Tortas")
+            startActivity(intent)
+        }
+
+        btnSopas.setOnClickListener {
+            val intent : Intent = Intent(this, ProductsActivity::class.java)
+            intent.putExtra("menuType","Sopas")
+            startActivity(intent)
+        }
+
+        btnBebidas.setOnClickListener {
+            val intent : Intent = Intent(this, ProductsActivity::class.java)
+            intent.putExtra("menuType","Bebidas")
             startActivity(intent)
         }
 
